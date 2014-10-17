@@ -1,0 +1,168 @@
+/*----------------------------------------------------------
+ * TITLE: Reserves Requests How-To CSS
+ *----------------------------------------------------------
+ * ABOUT: This CSS file is for a wikihow-like interface
+ *----------------------------------------------------------
+ * VERSION: This version created 09 October 2014 by RTS
+ *----------------------------------------------------------
+ * NOTES: This requires some simplification.
+ *----------------------------------------------------------
+*/ 
+
+#metaline {
+	font-size: 75%;
+	font-color: #DFDFDF;
+	line-height: 75%;
+	margin: 0;
+}
+
+#navigation {
+	line-height:90%;
+}
+
+#metaline > a {
+	padding-left: 2em;
+}
+
+#navigation hr {
+	clear: both;
+	border: 0;
+	margin:  0 0 1em 0;
+	padding: 0
+	height: 1px;
+	background-color: #D3D3D3;
+}
+
+h2 { 
+  	margin-left: 1.5em;
+  	text-indent: -1.5em;
+}
+
+#navigation p {
+	float: left;
+	line-height:90%;
+}
+
+#navigation ul {
+	list-style: none;
+   margin: 0;
+   padding: 0;
+	line-height:90%;
+}
+
+#navigation li {
+   display: inline;
+}
+
+#navigation li:before, h2:before {
+   content: "■";
+   color: #00008B;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+}
+
+div.contents {
+   background: #D3D3D3;
+   padding: 2em;
+   margin: 2em;
+   -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.introduction, #conclusion, #intro {
+	background: #F5F5F5;
+   padding: 0em;
+   margin-left: 0.75em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+div.steps li {
+	background: #F5F5F5;
+   padding: 0em;
+   margin-top: 0em;
+   margin-left: 0em;
+   margin-right: 0em;
+  margin-bottom: 2em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+}
+
+.firstsentence {
+  	font-weight: bold;
+}
+
+div.steps p {
+	text-indent: -1.75em;   
+	padding-left: 4em;
+	padding-right: 2em;
+}
+
+
+ .introduction h2, #conclusion h2, #intro h2 {
+   padding-top: 1em;
+  	padding-left: 1em;
+  	padding-right: 1em;
+}
+
+.introduction p, #conclusion p {
+   padding-bottom: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+#intro p { 
+ 	padding-left: 2em;
+   padding-right: 2em;
+	padding-bottom: 0em;
+	padding-top: 0em;
+}
+
+#intro ul {
+	padding-left: 4em;
+	padding-right: 4em;
+	padding-bottom: 0em;
+	padding-top: 0em;
+	margin: 0em;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+ol {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+    margin: 0;
+    margin-left: 0.5em;
+    padding: 0;
+    counter-reset: li-counter;
+}
+ol > li{
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 1.5em;
+    min-height: 3em;
+}
+
+ol p:before {
+    position: relative;
+    top: 0.5em;
+    left: -0.5em;
+    width: 0.8em;
+    font-size: 3em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    color: #464646;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
