@@ -1,0 +1,227 @@
+/* ------------------- */
+/* General style rules */
+/* ------------------- 
+
+/* Styles the navigation section at top of page */
+#navigation {
+	line-height:90%;
+}
+
+#metaline {
+	font-size: 75%;
+	font-color: #DFDFDF;
+	line-height: 75%;
+	margin: 0;
+}
+
+#metaline > a {
+	padding-left: 2em;
+}
+
+#navigation hr {
+	clear: both;
+	border: 0;
+	margin:  0 0 1em 0;
+	padding: 0;
+	height: 1px;
+	background-color: #D3D3D3;
+}
+
+#navigation p {
+	float: left;
+	line-height:90%;
+}
+
+#navigation ul {
+	list-style: none;
+   margin: 0;
+   padding: 0;
+	line-height:90%;
+}
+
+#navigation li {
+   display: inline;
+}
+
+#navigation li:before, h2:before {
+   content: "■";
+   color: #00008B;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+}
+
+/* styles the outside grey frame */ 
+div.contents {
+   background: #D3D3D3;
+   padding: 2em;
+   margin: 2em;
+   -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+}
+
+/* styles the inside off-white frame */
+.information {
+	background: #F5F5F5;
+   padding: 0em;
+   margin-left: 0.75em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	margin-bottom: 2em;
+}
+
+/* styles contents of off-white frames */
+.information h2 {
+   padding-top: 1em;
+  	padding-left: 1em;
+  	padding-right: 1em;
+	/*following two lines from stray code? */
+	margin-left: 1.5em;
+  	text-indent: -1.5em;
+}
+
+.information p {
+   padding-bottom: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+.information li {
+	margin-left: 1em;
+}
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+
+/* styles steps that use several off-white frames */
+
+div.steps {
+	margin-bottom: 2em;
+}
+
+div.steps li {
+	background: #F5F5F5;
+   padding: 0em;
+   margin-top: 0em;
+   margin-left: 0em;
+   margin-right: 0em;
+	margin-bottom: 2em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+}
+
+.firstsentence {
+  	font-weight: bold;
+}
+
+div.steps p {
+	text-indent: -1.75em;   
+	padding-left: 4em;
+	padding-right: 2em;
+}
+
+p.noimage {
+        padding-bottom: 20px;
+}
+
+
+/* styles ordered list for steps */
+.steps ol {
+    list-style-type: none;
+    list-style-type: decimal !ie; /*IE 7- hack*/
+    margin: 0;
+    margin-left: 0.5em;
+    padding: 0;
+    counter-reset: li-counter;
+}
+.steps ol > li{
+    position: relative;
+    margin-bottom: 50px;
+    padding-left: 1.5em;
+    min-height: 3em;
+}
+
+.steps ol p:before {
+    position: relative;
+    top: 0.5em;
+    left: -0.5em;
+    width: 0.8em;
+    font-size: 3em;
+    line-height: 1;
+    font-weight: bold;
+    text-align: right;
+    color: #464646;
+    content: counter(li-counter);
+    counter-increment: li-counter;
+}
+
+/* ----------------------- */
+/* Mobile responsive rules */
+/* ----------------------- */
+
+/* Smartphone rules*/
+@media only screen and (max-width : 600px) {
+
+	/* shrink navigation on smartphones */
+	#navigation { font-size: 80%; }
+	
+	/* narrows grey borders and such on smartphones */
+	div.contents {
+	   background: #D3D3D3;
+	   padding: 0em;
+       padding-bottom: 0.5em;
+	   margin: 0em;
+       -webkit-border-radius: 2px;
+	   -moz-border-radius: 2px;
+	    border-radius: 2px;
+	}
+
+	/*correspondingly shrink off-white area on smartphones */
+	div.information, div.steps {
+		background: #F5F5F5;
+		border-color: #D3D3D3;
+		border-style: solid;
+		border-width: 5px;	   
+		padding: 0em;
+		margin-left: 0em;
+		margin-right: 0em;
+		-webkit-border-radius: 1px;
+		-moz-border-radius: 1px;
+		border-radius: 1px;
+	}
+	
+	/* alter spacing for headings on smartphones */
+	.information h2 {
+        padding-top: 0em;
+        padding-left: 0.1em;
+		padding-right: 0.1em;
+    }
+	
+	/* alter spacing on paragraphs on smartphones */ 
+    .information p {
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+	
+	
+	.alignleft {
+		visibility: hidden;
+	}
+
+	.alignright {
+		visibility: hidden;
+	}
+
+}
+

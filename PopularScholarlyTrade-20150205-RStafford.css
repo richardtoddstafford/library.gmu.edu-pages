@@ -1,0 +1,220 @@
+/* Mobile responsive table CSS */
+@media 
+	only screen and (max-width: 760px) {
+	
+		/* Don't behave like a table */
+		table, thead, tbody, th, td, tr { 
+			display: block; 
+		}
+		
+		/* hide, but keep table headers for accessibility) */
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		tr { border: 1px solid #ccc; }
+		
+		td { 
+			border: none;
+			/* border-bottom: 15px solid #eee; */
+			position: relative;
+		        margin-left: 30%;
+		}
+		
+		td:before { 
+			position: absolute;
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			white-space: nowrap;
+		}
+		
+		/*When in narrow viewport, each row of data must be labeled*/
+		td:nth-of-type(2):before { content: "Popular"; left:-40%;  }
+		td:nth-of-type(3):before { content: "Scholarly"; left: -40%;}
+		td:nth-of-type(4):before { content: "Trade"; left:-40%;}
+	}
+
+
+/* Default table style for desktops and high resolution devices */
+
+	table { 
+		width: 99%; 
+		border-collapse: collapse;
+		margin-left: 10px;
+	}
+	
+	tr:nth-of-type(odd) { 
+		background: #eee; 
+	}
+	th { 
+		background: #333; 
+		color: white; 
+		font-weight: bold; 
+	}
+	td, th { 
+		padding: 6px; 
+		border: 1px solid #ccc; 
+		text-align: left; 
+	}
+        tbody tr td:first-child  { font-weight: bold; }
+
+
+/* --------------------------------------------------------- */
+/* Standard CSS for static tutorial pages on library.gmu.edu */
+/* --------------------------------------------------------- */
+
+	
+/* styles the navigation and meta section */
+#navigation {
+	line-height:90%;
+}
+
+#metaline {
+	font-size: 75%;
+	font-color: #DFDFDF;
+	line-height: 75%;
+	margin: 0;
+}
+	
+#metaline > a {
+	padding-left: 2em;
+}
+
+#navigation hr {
+	clear: both;
+	border: 0;
+	margin:  0 0 1em 0;
+	padding: 0;
+	height: 1px;
+	background-color: #D3D3D3;
+}
+
+#navigation p {
+	float: left;
+	line-height:90%;
+}
+
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	line-height:90%;
+}
+
+#navigation li {
+   display: inline;
+}
+
+#navigation li:before, h2:before {
+   content: "■";
+   color: #00008B;
+   padding-left: 0.5em;
+   padding-right: 0.5em;
+}
+
+/* styles the outside grey frame */
+div.contents {
+   background: #D3D3D3;
+   padding: 2em;
+   margin: 2em;
+   -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/* styles the inside off-white frame */
+.information {
+	background: #F5F5F5;
+	padding: 0em;
+	margin-left: 0.75em;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+/* styles contents of off-white frames */
+ .information h2 {
+   padding-top: 1em;
+  	padding-left: 1em;
+  	padding-right: 1em;
+	margin-left: 1.5em;
+  	text-indent: -1.5em;
+}
+
+.information p {
+   padding-bottom: 1em;
+   padding-left: 2em;
+   padding-right: 2em;
+}
+
+
+.alignleft {
+   float: left;
+}
+
+.alignright {
+   float: right;
+}
+
+
+
+
+/* design changes for very small screens */
+@media only screen and (max-width: 420px) {
+
+    table { margin-left: 0px; }
+
+	div.contents {
+		background: #D3D3D3;
+		padding: 0em;
+        padding-bottom: 0.5em;
+		margin: 0em;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+	}
+
+	.information {
+		background: #F5F5F5;
+		border-color: #D3D3D3;
+		border-style: solid;
+		border-width: 5px;	   
+		padding: 0em;
+		margin-left: 0em;
+		-webkit-border-radius: 1px;
+		-moz-border-radius: 1px;
+		border-radius: 1px;
+	}
+	
+    .information h2 {
+        padding-top: 0em;
+        padding-left: 0.1em;
+  	    padding-right: 0.1em;
+    }
+
+    .introduction p, #conclusion p, #download p {
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+
+    #navigation { font-size: 80%; }
+
+    td:before { 
+		left: 0px;
+		width: 45%; 
+		padding-right: 0px; ;
+	}
+		
+	.alignleft {
+		visibility: hidden;
+	}
+
+	.alignright {
+		visibility: hidden;
+	}
+
+}
